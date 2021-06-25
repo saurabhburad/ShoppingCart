@@ -1,0 +1,54 @@
+         <div class="small-shopping-container">
+             <div class="row row-2">
+                 <h2>All Products</h2>
+                 <div class="position-relative">
+                  <form #searchData="ngForm">
+                    <div class="text-center b11">
+                      <div class="form-a1">
+                        
+                        <input [(ngModel)]="query" placeholder="Enter product to search " type="text" name="query"
+                        [ngbTypeahead]="searchListValue" 
+                        [resultFormatter]="resultFormatListSearchValue"
+                        [inputFormatter]="inputFormatListSearchValue.bind(this)" 
+                          />
+                        <button class="btn btn-danger search-button-a1 rounded-0 rounded-right" 
+                        (click)="searchPossession()"
+                        >Search</button>
+                        <!-- [ngbTypeahead]="searchListValue" 
+                          [disabled]="clickLocation.name === ''"
+                          [resultFormatter]="resultFormatListSearchValue"
+                          [inputFormatter]="inputFormatListSearchValue.bind(this)" -->
+                      </div>
+                    </div>
+                  </form>
+                </div> 
+                
+                 <!-- filter drop down for price range starts  -->
+                 <div>
+                    <label for="optionFilter"><b>Sort by product's price:</b></label>
+                    <select (change)="changeFilterOptionByvalue($event.target.value)">
+                        <option>Choose option</option>
+                        <option *ngFor="let option of listOfFilterFordisplay">{{option}}</option>
+                    </select>
+                </div>
+                  <!-- filter drop down for price range ends -->
+             </div>
+
+             <div class="row">
+               <div class="col-4 cursor-pointer" *ngFor="let product of allProductsData" 
+                  (click)="openProductDetails(product)">
+                  <a><img src="{{product.image1}}"></a>
+                  <a><h4>{{product.description}}</h4></a>
+                  <div class="product-rating">
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-half-o"></i>
+                     <i class="fa fa-star-o"></i>
+                  </div>
+                  <p>&euro; {{product.price}}</p>
+              </div>
+            </div>
+            
+
+         </div>

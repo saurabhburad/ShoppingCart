@@ -1,0 +1,132 @@
+<div class="shop-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <h1>Give Your Lifestyle<br> a new look! </h1>
+                <p>Hello, Enjoy your shopping experience !</p>
+                <a (click)="openProductsSection()" class="btn cursor-pointer">Explore Now &#8594;</a>
+            </div>
+            <div class="col-2">
+                <img src="./../../../../assets/images/image1.png" alt="i3">
+  
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Our Featured Categories -->
+        <div class="featured-categories">
+            <div class="small-shopping-container">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./../../../../assets/images/category-1.jpg">
+                    </div>
+                    <div class="col-3">
+                        <img src="./../../../../assets/images/category-2.jpg">
+                    </div>
+                    <div class="col-3">
+                        <img src="./../../../../assets/images/category-3.jpg">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+ <!-- Shopping Featured Products -->
+         <div class="small-shopping-container">
+             <h2 class="featured-title">Featured Products</h2>
+             <div class="row">
+                <div class="col-4 cursor-pointer" *ngFor="let product of allProductsData.all_products.featured_products"
+                (click)="openProductDetails(product)">
+                    <a><img src="{{product.image1}}"></a>
+                    <a><h4>{{product.description}}</h4></a>
+                    <div class="product-rating">
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star-half-o"></i>
+                       <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>{{product.price}}</p>
+                </div>
+             </div>
+             
+             <h2 class="featured-title">Latest Products</h2>
+             <div class="row">
+                <div class="col-4 cursor-pointer" *ngFor="let latestProduct of allProductsData.all_products.latest_products"
+                    (click)="openProductDetails(latestProduct)">
+                    <img src="{{latestProduct.image1}}">
+                    <h4>{{latestProduct.description}}</h4>
+                    <div class="product-rating">
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star"></i>
+                       <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>&euro; {{latestProduct.price}}</p>
+                </div>
+            </div>
+
+         </div>
+         <!-- Shopping Offers -->
+         <div class="shopping-offers">
+             <div class="small-shopping-container">
+                 <div class="row">
+                     <div class="col-2">
+                         <img src="./../../../../assets/images/exclusive.png" alt="Exclusive shopping offers">
+                     </div>
+                     <div class="col-2">
+                         <p>Exclusively Available on Regenerate Clothing.</p>
+                         <h3>Smart Band 4</h3>
+                         <small>The Mi Smart Band 4 features a 39.9% larger (than Mi Band 4) AMOLED color full-touch display with adjustable brightness,Android 4.4 or later/iOS 9.0 or later.
+                        </small>
+                     </div>
+                 </div>
+             </div>
+         </div>
+   
+         <!-- shopping-testimonial -->
+<div class="shopping-testimonial">
+    <div class="small-shopping-container">
+        <div class="row">
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>Best customer service ever served by any clothing website.</p>
+                <div class="product-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <img src="./../../../../assets/images/user-1.png" alt="Pheobe Buffay">
+                <h3>Pheobe Buffay</h3>
+            </div>
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>Ordered a Black Fossils Watch. Received product in 2 days. Very happy with the product quality and service.</p>
+                <div class="product-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <img src="./../../../../assets/images/user-2.png" alt="Ross Geller">
+                <h3>Ross Geller</h3>
+            </div>
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>Bought grey skirt and I am really amazed with the quality of the product.</p>
+                <div class="product-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <img src="./../../../../assets/images/user-3.png" alt="Rachel Green">
+                <h3>Rachel Green</h3>
+            </div>
+        </div>
+    </div>
+</div>

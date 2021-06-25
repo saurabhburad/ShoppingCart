@@ -1,0 +1,138 @@
+/* All Product page */
+.small-shopping-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* padding: 10%; */
+}
+.col-4{
+    flex-basis: 25%;
+    padding:10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+.col-4 img{
+    width:100%;
+}
+
+.col-4 p{
+    font-size: 14px;
+}
+
+.col-4:hover{
+ transform: translateY(-5px);
+}
+
+h4{
+    color:#555;
+    font-weight: normal;
+}
+.product-rating{
+    color: #ff523b;
+}
+
+.products-title{
+    margin: 0 auto 80px;
+    text-align: center;
+    position: relative;
+    line-height: 60px;
+    color:#555;
+}
+.products-title::after{
+    content: '';
+    background: #ff523b;
+    width:80px;
+    height:5px;
+    border-radius: 5px;
+    position:absolute;
+    bottom:0;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+
+.row-2{
+    justify-content: space-between;
+    margin: 10px auto 50px;
+}
+select{
+    border: 1px solid #ff523b;
+    padding: 5px;
+}
+select:focous{
+     outline: none;
+}
+
+.page-button{
+    margin: 0 auto 80px;
+}
+.page-button span{
+    display: inline-block;
+    border: 1px solid #ff523b;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+
+}
+.page-button span:hover{
+    background: #ff523b;
+    color: #fff;
+}
+
+ .nav.nav-pills {
+    text-align: center;
+    margin-bottom: 21px;
+    display: block;
+
+}
+ .nav.nav-pills .nav-item {
+    display: inline-block;
+}
+ .nav.nav-pills .nav-item a {
+    border-radius: 1px;
+    border: 2px solid #fff;
+    color: black;
+    background-color: #eee;
+    padding: 1px;
+}
+ .nav.nav-pills .nav-item a.active {
+    color: white;
+    background-color: #dc4045;
+}
+ .nav.nav-pills .nav-item a label {
+    cursor: pointer;
+    margin-bottom: 1px;
+}
+
+.find-container {
+    position: relative;
+}
+.b11 input {border: 1px solid black;}
+
+
+.b11 select,
+.b11 input,
+.b11 button {
+    padding: 11px 111px 11px 11px;
+    height: auto;
+    margin-right: 1px;
+
+}
+ .b11 input {
+    padding: 8px 110px 12px 10px;
+}
+.b11 button {
+    padding: 10px 35px;
+}
+

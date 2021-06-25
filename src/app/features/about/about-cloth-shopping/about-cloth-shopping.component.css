@@ -1,0 +1,12 @@
+.small-shopping-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.about-text{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: cursive;
+    color: brown;
+}

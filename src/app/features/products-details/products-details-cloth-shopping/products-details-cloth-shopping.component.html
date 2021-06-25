@@ -1,0 +1,66 @@
+<!--Single product details  -->
+
+    <div class="small-shopping-container one-shopping-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="{{currentItem.image1}}" alt="" width="100%" id="imageProduct">
+                <div class="small-image-row">
+                    <div class="small-image-column">
+                        <img src="{{currentItem.image2}}" alt="" width="100%" class="small-images">
+                    </div>
+                    <div class="small-image-column">
+                        <img src="{{currentItem.image3}}" alt="" width="100%" class="small-images">
+                    </div>
+                    <div class="small-image-column">
+                        <img src="{{currentItem.image4}}" alt="" width="100%" class="small-images">
+                    </div>
+                    <div class="small-image-column">
+                        <img src="{{currentItem.image4}}" alt="" width="100%" class="small-images">
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <h4>{{currentItem.description}}</h4>
+                <h5>&euro; {{currentItem.price}}</h5>
+                <select [(ngModel)]="currentItem.selectedSize">
+                    <option>Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                </select>
+                <input type="number" value="1" min="1" [(ngModel)]="currentItem.productQuantities">
+                <a (click)="addProductToCart(currentItem)" class="btn">Add To Cart</a>
+                <h3>Product Details <i class="fa fa-indent"></i></h3>
+                <p>{{currentItem.productDetails}}</p>
+            </div>
+
+        </div>
+    </div>
+         <!-- All Products title -->
+         <div class="small-shopping-container">
+             <div class="">
+                 <h2>Related Products</h2>
+             </div>
+         </div>
+
+         <!-- all Products list-->
+
+         <div class="small-shopping-container">
+             <div class="row">
+                    <div class="col-4 cursor-pointer" *ngFor="let product of allProductsData.all_products.related_products"
+                    (click)="openProductDetails(product)">
+                        <a><img src="{{product.image1}}"></a>
+                        <a><h4>{{product.description}}</h4></a>
+                        <div class="product-rating">
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star-half-o"></i>
+                           <i class="fa fa-star-o"></i>
+                        </div>
+                        <p>{{product.price}}</p>
+                    </div>
+            </div>
+           </div>

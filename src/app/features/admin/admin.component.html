@@ -1,0 +1,37 @@
+<button class="btn btn-primary" (click)="navigate()" type="submit">Add record</button>
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">description</th>
+        <th scope="col">productDetails</th>
+        <th scope="col">rating</th>
+        <th scope="col">price</th>
+        <th scope="col">image1</th>
+        <th scope="col">image2</th>
+        <th scope="col">image3</th>
+        <th scope="col">image4</th>
+        <th scope="col">image5</th>
+        <th scope="col">delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let value of productsDetails;let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td class="specific">{{value.description}}</td>
+        <td class="specific">{{value.productDetails}}</td>
+        <td>{{value.rating}}</td>
+        <td>{{value.price}}</td>
+        <td class="specific">{{value.image1}}</td>
+        <td class="specific">{{value.image2}}</td>
+        <td class="specific">{{value.image3}}</td>
+        <td class="specific">{{value.image4}}</td>
+        <td class="specific">{{value.image5}}</td>
+        
+        <td class="specific"> <button class="btn btn-danger" (click)="deleteRecord(value.id)" type="submit">Delete record</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+  

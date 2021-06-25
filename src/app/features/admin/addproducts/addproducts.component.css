@@ -1,0 +1,10 @@
+.div-padding{
+    padding: 20px;
+}
+.text-red{
+    color: red;
+}
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }

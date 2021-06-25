@@ -1,0 +1,5 @@
+.specific {    
+    word-wrap: break-word;
+    min-width: 130px;
+    max-width: 130px;
+}
